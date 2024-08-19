@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-color: #201e17;
+}
+
+.log{
+    background-color: aliceblue;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .static{
+    /* display: flex; */
+    color: rgb(20, 18, 18);
+    font-size: 60px;
+    font-weight: 400;
+}
+
+/* .dynamic-txt{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    list-style: none;
+    color: rgb(34, 149, 194);
+    font-size: 80px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden; */
+/* } */
+
+
+.container .dynamic-txt{
+    margin-left: 20px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+
+
+.dynamic-txt li{
+    list-style: none;
+    color: rgb(34, 149, 194);
+    font-size: 60px;
+    font-weight: 600;
+    top: 0;
+    position: relative;
+    animation: slide 10s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -360px;
+    }
+}
+
+.dynamic-txt li{
+    position: relative;
+}
+
+.dynamic-txt li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+    border-left: 2px solid rgb(34, 149, 194);
+    animation: typing 3s steps(10) infinite;
+}
+
+
+@keyframes typing{
+    40%,
+    60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+.image{
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin-top: 20px;
+}
+
+#about{
+    color: white;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+   
+}
+#talk{
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    color: aliceblue;
+    margin-top: 60px;
+   padding-left:40px ;
+}
+
+.social-icons a{
+    color: azure;
+    font-size: 3.5rem;
+    padding: 5rem;
+}
+.social-icons a i:hover{
+    color: rgb(34, 149, 194);   
+    font-size: 3.5rem;
+    transition: .5s;
+    transform: scale(1.3);
+    z-index: 2;
+    
+}
+
+.group{
+    background-color: aliceblue;
+}
+
+.projects{
+    color: #201e17;
+    margin-top: 60px;
+   padding-left:40px ;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: 1s;
+
+}
+
+.row {
+    display: flex;
+    padding-top: 2rem;
+    content: '';
+    width: 100%
+}
+
+.row img {
+    display: block;
+    justify-content: center;
+    padding-top: 2rem;
+    width: 100%;
+    border-radius: 5px;
+    padding-bottom: 5rem;
+
+}
+
+.column:hover {
+    transform: scale(1.5);
+    z-index: 0;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 28px;
+}
+
+
+
+
+/* 
+
+.contact-section{
+    height: 80%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.contact-section .btn{
+    padding: 8px 28px;
+    background: rgb(82, 69, 65);
+    border: 1px solid;
+    color: #efefef;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    box-shadow: #000 0 0 10px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: .6s;
+
+}
+.contact-section .btn:hover{
+    
+    background:  #E83A31;
+    border: 1px solid rgb(82, 69, 65);
+}
+.contact-section .social-icons{
+
+    font-size: 1.5rem;
+    margin: 0 5px;
+    color: #E83A31;
+    transition: .6s;
+}
+.contact-section .social-icons i:hover{
+transform: translateY(-20px);
+}
+
+.contact-section .social-icons i:nth-child(1):hover{
+color: aqua;
+}
+.contact-section .social-icons i:nth-child(2):hover{
+color: chartreuse;
+}
+.contact-section .social-icons i:nth-child(3):hover{
+color: blueviolet;
+}
+.contact-section .social-icons i:nth-child(4):hover{
+color: red;
+}
+.contact-section .social-icons i:nth-child(5):hover{
+color: hotpink;
+}
+.contact-section .social-icons i:nth-child(6):hover{
+color: teal;
+}
+
+.hero .image{
+   height: 40%;
+    width: 40%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:1100px){
+    .main{
+        min-height: 800px;
+    }
+    .hero{
+        flex-direction: column-reverse;
+    }
+    .hero .hero-image{
+        margin-top: 3rem;
+
+    }
+
+    .hero .content {
+        margin-top: 6rem;
+
+    }
+    .hero .content h3,
+    .hero .content h1,
+    .hero .content h1 span,
+    .hero .content p{
+        text-align: center;
+    }
+    .contact-section{
+        width: 100%;
+        justify-content: center;
+
+    }
+    .hero .hero-image{
+        height: 550px;
+        width: auto;
+
+    }
+}
+
+.hero .ball{
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 1100px){
+    #header .fa-bars{
+        display: block;
+    }
+    #header{
+        position: absolute;
+        border-bottom: 2px solid #000;
+    }
+    #header ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 450px;
+        background-color: #ffff;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        padding-left: 8px;
+        display: none;
+    }
+    #header ul li{
+        display: block;
+        padding: 10px 0;
+        margin:10px 0 ;
+    }
+
+} */
