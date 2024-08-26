@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -73,6 +80,34 @@ body{
         top: -360px;
     }
 }
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .container .dynamic-txt {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .dynamic-txt {
+        padding: 10px;
+    }
+}
+
+
+
 
 .dynamic-txt li{
     position: relative;
